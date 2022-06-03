@@ -1,5 +1,5 @@
 import { Link, routes } from '@redwoodjs/router'
-
+import styles from 'src/layouts/BlogLayout/bloglayout.module.css'
 type BlogLayoutProps = {
   children?: React.ReactNode
 }
@@ -7,7 +7,7 @@ type BlogLayoutProps = {
 const BlogLayout = ({ children }: BlogLayoutProps) => {
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <h1>
           <Link to={routes.home()}>d_docs</Link>
         </h1>
