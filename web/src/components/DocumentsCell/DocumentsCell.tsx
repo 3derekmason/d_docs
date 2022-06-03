@@ -1,11 +1,13 @@
 import type { DocumentsQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
-
 export const QUERY = gql`
   query DocumentsQuery {
     documents {
       id
+      title
+      description
+      createdAt
     }
   }
 `
