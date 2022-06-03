@@ -8,6 +8,7 @@ export const QUERY = gql`
     document: document(id: $id) {
       id
       title
+      description
       url
       createdAt
     }

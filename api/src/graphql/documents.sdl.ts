@@ -2,6 +2,7 @@ export const schema = gql`
   type Document {
     id: Int!
     title: String!
+    description: String!
     url: String!
     createdAt: DateTime!
   }
@@ -13,11 +14,13 @@ export const schema = gql`
 
   input CreateDocumentInput {
     title: String!
+    description: String!
     url: String!
   }
 
   input UpdateDocumentInput {
     title: String
+    description: String
     url: String
   }
 

@@ -11,6 +11,7 @@ generator client {
 model Document {
   id    Int     @id @default(autoincrement())
   title String  @unique
+  description String
   url   String
   createdAt DateTime @default(now())
 }

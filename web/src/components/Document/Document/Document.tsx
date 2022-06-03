@@ -77,6 +77,9 @@ const Document = ({ document }) => {
               <th>Title</th>
               <td>{document.title}</td>
             </tr><tr>
+              <th>Description</th>
+              <td>{document.description}</td>
+            </tr><tr>
               <th>Url</th>
               <td>{document.url}</td>
             </tr><tr>

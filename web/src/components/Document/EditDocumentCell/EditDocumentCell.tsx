@@ -12,6 +12,7 @@ export const QUERY = gql`
     document: document(id: $id) {
       id
       title
+      description
       url
       createdAt
     }
@@ -22,6 +23,7 @@ const UPDATE_DOCUMENT_MUTATION = gql`
     updateDocument(id: $id, input: $input) {
       id
       title
+      description
       url
       createdAt
     }

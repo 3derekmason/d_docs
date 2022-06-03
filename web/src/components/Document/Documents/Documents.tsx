@@ -81,6 +81,7 @@ const DocumentsList = ({ documents }) => {
           <tr>
             <th>Id</th>
             <th>Title</th>
+            <th>Description</th>
             <th>Url</th>
             <th>Created at</th>
             <th>&nbsp;</th>
@@ -91,6 +92,7 @@ const DocumentsList = ({ documents }) => {
             <tr key={document.id}>
               <td>{truncate(document.id)}</td>
               <td>{truncate(document.title)}</td>
+              <td>{truncate(document.description)}</td>
               <td>{truncate(document.url)}</td>
               <td>{timeTag(document.createdAt)}</td>
               <td>

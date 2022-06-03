@@ -19,6 +19,9 @@ const DocumentForm = (props) => {
     
     
   
+    
+    
+  
     props.onSave(data, props?.document?.id)
   }
 
@@ -50,6 +53,25 @@ const DocumentForm = (props) => {
         
 
         <FieldError name="title" className="rw-field-error" />
+
+        <Label
+          name="description"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Description
+        </Label>
+        
+          <TextField
+            name="description"
+            defaultValue={props.document?.description}
+            className="rw-input"
+            errorClassName="rw-input rw-input-error"
+            validation={{ required: true }}
+          />
+        
+
+        <FieldError name="description" className="rw-field-error" />
 
         <Label
           name="url"
