@@ -1,8 +1,12 @@
-import type { FindDocumentQuery, FindDocumentQueryVariables } from 'types/graphql'
+import type {
+  FindDocumentQuery,
+  FindDocumentQueryVariables,
+} from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
+// import Article from 'src/components/Article'
 
 export const QUERY = gql`
-  query FindDocumentQuery($id: Int!) {
+  query DocumentsQuery($id: Int!) {
     document: document(id: $id) {
       id
     }
