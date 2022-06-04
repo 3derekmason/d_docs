@@ -1,13 +1,7 @@
 
 # Welcome to DDocumentation
 
-<br>
 
-#### Made with love using [RedwoodJS](https://redwoodjs.com)
-
-<br>
-
----
 ---
 
 <br>
@@ -83,4 +77,8 @@ yarn rw setup deploy --help
 ```
 yarn rw setup auth --help
 ```
+---
+
+#### Made with love using [RedwoodJS](https://redwoodjs.com)
+
 ---
