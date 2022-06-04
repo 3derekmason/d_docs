@@ -4,7 +4,7 @@ const AppBar = () => {
   return (
     <header className={styles.appBar}>
       <h1>
-        <Link to={routes.home()}>d_docs</Link>
+        <Link to={routes.documents()}>d_docs</Link>
       </h1>
       <nav>
         <ul className={styles.navBar}>
