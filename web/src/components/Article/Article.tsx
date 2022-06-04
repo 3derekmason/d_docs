@@ -15,7 +15,11 @@ const Article = ({ article }: Props) => {
         </h2>
       </header>
       <div>{article.description}</div>
-      <div>{article.url}</div>
+      <div>
+        <a href={article.url} target="_blank" rel="noreferrer">
+          {article.url}
+        </a>
+      </div>
       <div>Posted at: {article.createdAt}</div>
     </article>
   )

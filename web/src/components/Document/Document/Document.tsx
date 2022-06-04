@@ -66,23 +66,33 @@ const Document = ({ document }) => {
     <>
       <div className="rw-segment">
         <header className="rw-segment-header">
-          <h2 className="rw-heading rw-heading-secondary">Document {document.id} Detail</h2>
+          <h2 className="rw-heading rw-heading-secondary">
+            Document {document.id} Detail
+          </h2>
         </header>
         <table className="rw-table">
           <tbody>
             <tr>
               <th>Id</th>
               <td>{document.id}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Title</th>
               <td>{document.title}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Description</th>
               <td>{document.description}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Url</th>
-              <td>{document.url}</td>
-            </tr><tr>
+              <td>
+                <a href={document.url} target="_blank" rel="noreferrer">
+                  {document.url}
+                </a>
+              </td>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(document.createdAt)}</td>
             </tr>
