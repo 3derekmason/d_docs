@@ -1,0 +1,10 @@
+.appFooter{
+  width: 100vw;
+  height: 24px;
+  display: grid;
+  place-content: center;
+  background: #041016;
+  color: #9575CD;
+  font-size: 14px;
+  font-weight: 400;
+}

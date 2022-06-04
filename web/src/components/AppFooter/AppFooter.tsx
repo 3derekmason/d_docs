@@ -1,8 +1,9 @@
+import styles from 'src/components/AppFooter/appfooter.module.css'
+
 const AppFooter = () => {
   return (
-    <div>
-      <h2>{'AppFooter'}</h2>
-      <p>{'Find me in ./web/src/components/AppFooter/AppFooter.tsx'}</p>
+    <div className={styles.appFooter}>
+      <p>Sadies Gym est. 2022</p>
     </div>
   )
 }

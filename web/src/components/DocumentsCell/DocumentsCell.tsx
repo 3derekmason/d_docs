@@ -25,7 +25,7 @@ export const Failure = ({ error }: CellFailureProps) => (
 
 export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
   return (
-    <ul style={{ height: 'calc(100vh - 100px)', margin: 0 }}>
+    <ul>
       {documents.map((item) => {
         return <Article key={item.id} article={item} />
       })}
