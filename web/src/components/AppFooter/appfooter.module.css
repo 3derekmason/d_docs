@@ -7,4 +7,25 @@
   color: #9575CD;
   font-size: 14px;
   font-weight: 400;
+  animation: pulse 4s infinite linear
+}
+.appFooter:hover {
+  animation: none;
+}
+@keyframes pulse {
+  0% {
+    opacity: 1
+  }
+  40%{
+    opacity: 0.75
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60%{
+    opacity: 0.75
+  }
+  100%{
+    opacity: 1;
+  }
 }
