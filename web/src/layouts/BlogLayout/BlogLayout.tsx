@@ -9,6 +9,7 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
     <>
       <AppBar />
       <main>{children}</main>
+      <footer>@SadiesGym 2022</footer>
     </>
   )
 }
