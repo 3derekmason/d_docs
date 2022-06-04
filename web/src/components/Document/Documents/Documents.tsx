@@ -93,7 +93,15 @@ const DocumentsList = ({ documents }) => {
               <td>{truncate(document.id)}</td>
               <td>{truncate(document.title)}</td>
               <td>{truncate(document.description)}</td>
-              <td>{truncate(document.url)}</td>
+              <td>
+                <a
+                  href={`http://${truncate(document.url)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {truncate(document.url)}
+                </a>
+              </td>
               <td>{timeTag(document.createdAt)}</td>
               <td>
                 <nav className="rw-table-actions">

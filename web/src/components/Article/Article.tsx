@@ -16,7 +16,7 @@ const Article = ({ article }: Props) => {
       </header>
       <div>{article.description}</div>
       <div>
-        <a href={article.url} target="_blank" rel="noreferrer">
+        <a href={`https://${article.url}`} target="_blank" rel="noreferrer">
           {article.url}
         </a>
       </div>

@@ -87,7 +87,11 @@ const Document = ({ document }) => {
             <tr>
               <th>Url</th>
               <td>
-                <a href={document.url} target="_blank" rel="noreferrer">
+                <a
+                  href={`http://${document.url}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {document.url}
                 </a>
               </td>
