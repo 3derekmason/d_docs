@@ -1,7 +1,31 @@
+a {
+  text-decoration: none;
+  color: #7E57C2;
+}
+a:hover {
+  color: #EDE7F6
+}
+a:active {
+  color: #5E35B1
+}
+
 .appBar {
-  width: 100vw;
   height: 64px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 64px;
+  padding-left: 64px;
+  padding-right: 64px;
+  background: #041016;
+  color: #7E57C2;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 200;
+}
+.navBar{
+  list-style-type: none;
+  display: flex;
   gap: 32px;
+  letter-spacing: 2px;
+  font-weight: 600;
 }

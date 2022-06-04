@@ -7,7 +7,7 @@ const AppBar = () => {
         <Link to={routes.home()}>d_docs</Link>
       </h1>
       <nav>
-        <ul>
+        <ul className={styles.navBar}>
           <li>
             <Link to={routes.home()}>Home</Link>
           </li>
