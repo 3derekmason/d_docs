@@ -8,6 +8,7 @@ import {
   Submit,
   SubmitHandler,
 } from '@redwoodjs/forms'
+import styles from 'src/pages/ContactPage/contactPage.module.css'
 
 interface FormValues {
   name: string
@@ -27,48 +28,60 @@ const ContactPage = () => {
       <Form
         onSubmit={onSubmit}
         config={{ mode: 'onBlur' }}
-        style={{
-          height: '100%',
-          display: 'grid',
-          placeContent: 'center',
-          gap: '32px',
-        }}
+        className={styles.form}
       >
-        <Label name="name" errorClassName="error">
-          Name
-        </Label>
-        <TextField
-          name="name"
-          validation={{ required: true }}
-          errorClassName="error"
+        <h2>Send Derek a message:</h2>
+        <div className={styles.formRow}>
+          <Label name="name" errorClassName="error">
+            Name
+          </Label>
+          <TextField
+            name="Name"
+            validation={{ required: true }}
+            errorClassName="error"
+          />
+        </div>
+        <FieldError
+          style={{ fontSize: '12px', color: '#d50000', textAlign: 'center' }}
+          name="Name"
+          className="error"
         />
-        <FieldError name="name" className="error" />
-
-        <Label name="email" errorClassName="error">
-          Email
-        </Label>
-        <TextField
+        <div className={styles.formRow}>
+          <Label name="email" errorClassName="error">
+            Email
+          </Label>
+          <TextField
+            name="email"
+            validation={{
+              required: true,
+              pattern: {
+                value: /^[^@]+@[^.]+\..+$/,
+                message: 'Please enter a valid email address',
+              },
+            }}
+            errorClassName="error"
+          />
+        </div>
+        <FieldError
+          style={{ fontSize: '12px', color: '#d50000', textAlign: 'center' }}
           name="email"
-          validation={{
-            required: true,
-            pattern: {
-              value: /^[^@]+@[^.]+\..+$/,
-              message: 'Please enter a valid email address',
-            },
-          }}
-          errorClassName="error"
+          className="error"
         />
-        <FieldError name="email" className="error" />
-
-        <Label name="message" errorClassName="error">
-          Message
-        </Label>
-        <TextAreaField
-          name="message"
-          validation={{ required: true }}
-          errorClassName="error"
+        <div className={styles.formRow}>
+          <Label name="message" errorClassName="error">
+            Whats up?
+          </Label>
+          <TextAreaField
+            name="Message"
+            validation={{ required: true }}
+            errorClassName="error"
+          />
+        </div>
+        <FieldError
+          style={{ fontSize: '12px', color: '#d50000', textAlign: 'center' }}
+          name="Message"
+          className="error"
         />
-        <FieldError name="message" className="error" />
 
         <Submit>Save</Submit>
       </Form>
