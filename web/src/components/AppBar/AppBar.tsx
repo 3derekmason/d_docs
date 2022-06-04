@@ -9,10 +9,13 @@ const AppBar = () => {
       <nav>
         <ul className={styles.navBar}>
           <li>
-            <Link to={routes.home()}>Home</Link>
+            <Link to={routes.contact()}>Contact</Link>
           </li>
           <li>
             <Link to={routes.about()}>About</Link>
+          </li>
+          <li>
+            <Link to={routes.home()}>Home</Link>
           </li>
         </ul>
       </nav>
