@@ -1,5 +1,6 @@
 import type { ContactsQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
+import Message from 'src/components/Message'
 
 export const QUERY = gql`
   query ContactsQuery {
@@ -25,7 +26,7 @@ export const Success = ({ contacts }: CellSuccessProps<ContactsQuery>) => {
   return (
     <ul>
       {contacts.map((item) => {
-        return <li key={item.id}>{JSON.stringify(item)}</li>
+        return <Message key={item.id} message={item} />
       })}
     </ul>
   )
