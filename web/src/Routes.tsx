@@ -6,10 +6,10 @@ const Routes = () => {
   return (
     <Router>
       <Set wrap={DocumentsLayout}>
-        <Route path="/documents/new" page={DocumentNewDocumentPage} name="newDocument" />
-        <Route path="/documents/{id:Int}/edit" page={DocumentEditDocumentPage} name="editDocument" />
-        <Route path="/documents/{id:Int}" page={DocumentDocumentPage} name="document" />
-        <Route path="/documents" page={DocumentDocumentsPage} name="documents" />
+        <Route path="/admin/documents/new" page={DocumentNewDocumentPage} name="newDocument" />
+        <Route path="/admin/documents/{id:Int}/edit" page={DocumentEditDocumentPage} name="editDocument" />
+        <Route path="/admin/documents/{id:Int}" page={DocumentDocumentPage} name="document" />
+        <Route path="/admin/documents" page={DocumentDocumentsPage} name="documents" />
       </Set>
       <Set wrap={BlogLayout}>
         <Route path="/contact" page={ContactPage} name="contact" />
