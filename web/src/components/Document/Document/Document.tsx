@@ -1,5 +1,7 @@
 import humanize from 'humanize-string'
 
+import { useAuth } from '@redwoodjs/auth'
+
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 import { Link, routes, navigate } from '@redwoodjs/router'
@@ -46,6 +48,7 @@ const checkboxInputTag = (checked) => {
 }
 
 const Document = ({ document }) => {
+  const { isAuthenticated } = useAuth()
   const [deleteDocument] = useMutation(DELETE_DOCUMENT_MUTATION, {
     onCompleted: () => {
       toast.success('Document deleted')
@@ -103,21 +106,25 @@ const Document = ({ document }) => {
           </tbody>
         </table>
       </div>
-      <nav className="rw-button-group">
-        <Link
-          to={routes.editDocument({ id: document.id })}
-          className="rw-button rw-button-blue"
-        >
-          Edit
-        </Link>
-        <button
-          type="button"
-          className="rw-button rw-button-red"
-          onClick={() => onDeleteClick(document.id)}
-        >
-          Delete
-        </button>
-      </nav>
+      {isAuthenticated ? (
+        <nav className="rw-button-group">
+          <Link
+            to={routes.editDocument({ id: document.id })}
+            className="rw-button rw-button-blue"
+          >
+            Edit
+          </Link>
+          <button
+            type="button"
+            className="rw-button rw-button-red"
+            onClick={() => onDeleteClick(document.id)}
+          >
+            Delete
+          </button>
+        </nav>
+      ) : (
+        ''
+      )}
     </>
   )
 }

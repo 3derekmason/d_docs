@@ -1,5 +1,3 @@
-import { Link, routes } from '@redwoodjs/router'
-
 import type { Contact } from 'types/graphql'
 
 interface Props {

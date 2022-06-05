@@ -24,10 +24,10 @@ export const Failure = ({ error }: CellFailureProps) => (
 
 export const Success = ({ contacts }: CellSuccessProps<ContactsQuery>) => {
   return (
-    <ul>
+    <div>
       {contacts.map((item) => {
         return <Message key={item.id} message={item} />
       })}
-    </ul>
+    </div>
   )
 }
