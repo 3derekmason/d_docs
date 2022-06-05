@@ -10,8 +10,6 @@ const ArticlePage = ({ id }: Props) => {
   return (
     <>
       <MetaTags title="Article" description="Article page" />
-
-      <h1>ArticlePage</h1>
       <DocumentCell id={id} />
     </>
   )

@@ -73,38 +73,12 @@ const Document = ({ document }) => {
             Document {document.id} Detail
           </h2>
         </header>
-        <table className="rw-table">
-          <tbody>
-            <tr>
-              <th>Id</th>
-              <td>{document.id}</td>
-            </tr>
-            <tr>
-              <th>Title</th>
-              <td>{document.title}</td>
-            </tr>
-            <tr>
-              <th>Description</th>
-              <td>{document.description}</td>
-            </tr>
-            <tr>
-              <th>Url</th>
-              <td>
-                <a
-                  href={`http://${document.url}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {document.url}
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th>Created at</th>
-              <td>{timeTag(document.createdAt)}</td>
-            </tr>
-          </tbody>
-        </table>
+        <h2>{document.title}</h2>
+        <div>{document.description}</div>
+        <a href={`http://${document.url}`} target="_blank" rel="noreferrer">
+          {document.url}
+        </a>
+        <p>{timeTag(document.createdAt)}</p>
       </div>
       {isAuthenticated ? (
         <nav className="rw-button-group">
