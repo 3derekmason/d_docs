@@ -9,16 +9,7 @@ const AppBar = () => {
       <h1>
         <Link to={routes.documents()}>d_docs</Link>
       </h1>
-      {isAuthenticated ? (
-        <div>
-          <span>Logged in as {currentUser.email}</span>{' '}
-          <button type="button" onClick={logOut}>
-            Logout
-          </button>
-        </div>
-      ) : (
-        <Link to={routes.login()}>Login</Link>
-      )}
+
       <nav>
         <ul className={styles.navBar}>
           <li>
@@ -30,6 +21,15 @@ const AppBar = () => {
           <li>
             <Link to={routes.home()}>Home</Link>
           </li>
+          {isAuthenticated ? (
+            <div>
+              <a href="" onClick={logOut}>
+                Logout
+              </a>
+            </div>
+          ) : (
+            <Link to={routes.login()}>Login</Link>
+          )}
         </ul>
       </nav>
     </header>
