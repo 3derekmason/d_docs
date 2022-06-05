@@ -9,7 +9,7 @@ export const schema = gql`
 
   type Query {
     documents: [Document!]! @skipAuth
-    document(id: Int!): Document @requireAuth
+    document(id: Int!): Document @skipAuth
   }
 
   input CreateDocumentInput {
