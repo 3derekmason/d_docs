@@ -1,0 +1,13 @@
+.article{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.articleRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

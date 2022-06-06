@@ -3,7 +3,7 @@ import styles from '/src/components/AppBar/appbar.module.css'
 import { useAuth } from '@redwoodjs/auth'
 
 const AppBar = () => {
-  const { isAuthenticated, currentUser, logOut } = useAuth()
+  const { isAuthenticated, logOut } = useAuth()
   return (
     <header className={styles.appBar}>
       <h1>
