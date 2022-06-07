@@ -11,6 +11,16 @@
   width: 100%;
 }
 
+.navbar button {
+  background: none;
+  color: #ffffff80;
+  border: none;
+}
+.navbar button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
 .navbarContainer .openBar {
   height: 80px;
   width: 100%;
