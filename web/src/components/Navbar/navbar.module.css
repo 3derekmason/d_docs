@@ -1,5 +1,45 @@
 .navbar {
   height: 100%;
   width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   border: 1px solid green;
 }
+
+.navbar .navbarContainer {
+  height: 60%;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+.navbarContainer .openBar {
+  height: 80px;
+  width: 100%;
+  border: 1px solid white;
+  animation: showBar 1s;
+}
+.navbarContainer .closedBar {
+  height: 80px;
+  width: 100%;
+  border: 1px solid white;
+  transform: translateX(-800px);
+  animation: hideBar 1s;
+}
+@keyframes hideBar {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-800px);
+  }
+}
+@keyframes showBar {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
