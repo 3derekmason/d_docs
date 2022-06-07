@@ -1,9 +1,13 @@
 .article{
-  width: 50%;
+  box-sizing: border-box;
+  padding: 4px;
+  padding-left: 40px;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 8px;
+  border-bottom: 0.25px solid #ffffff80;
 }
 
 .articleRow {

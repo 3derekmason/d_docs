@@ -27,7 +27,6 @@ export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
   return (
     <div
       style={{
-        marginLeft: '40px',
         width: '800px',
         height: '100%',
         display: 'flex',

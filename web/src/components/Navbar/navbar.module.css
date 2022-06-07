@@ -3,7 +3,9 @@
   width: 320px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
+  border-right: 0.5px solid #ffffff80;
 }
 
 .navbar .navbarContainer {
@@ -12,6 +14,8 @@
 }
 
 .navbar button {
+  width: 48px;
+  margin-top: 8px;
   background: none;
   color: #ffffff80;
   border: none;
@@ -19,15 +23,35 @@
 .navbar button:hover {
   color: #fff;
   cursor: pointer;
+  border-left: 0.5px solid #ffffff;
+  border-right: 0.5px solid #ffffff;
 }
 
 .navbarContainer .openBar {
+  box-sizing: border-box;
   height: 80px;
   width: 100%;
+  padding: 16px;
   border-bottom: 0.5px solid #ffffff80;
   animation: showBar 1s;
 }
+.openBar:hover {
+  background: #ffffff10;
+  border-bottom: 0.5px solid #ffffff;
+  border-top: 0.5px solid #ffffff;
+  cursor: pointer;
+  color: #B388FF;
+}
+.openBar:active {
+  background: #ffffff20;
+  border-bottom: 0.5px solid #B388FF;
+  border-top: 0.5px solid #B388FF;
+  cursor: pointer;
+
+}
 .navbarContainer .closedBar {
+  box-sizing: border-box;
+  padding: 16px;
   height: 80px;
   width: 100%;
   border-bottom: 0.5px solid #ffffff80;

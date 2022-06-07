@@ -12,12 +12,12 @@ const Navbar = () => {
 
   return (
     <div className={styles.navbar}>
-      <button onClick={toggleOpen}>{open ? 'Close' : 'Open'}</button>
+      <button onClick={toggleOpen}>{open ? 'Close' : 'Menu'}</button>
       <div className={styles.navbarContainer}>
         {bars.map((bar) => {
           return (
             <div key={bar} className={open ? styles.openBar : styles.closedBar}>
-              Link/whatever
+              <h3>Action</h3>
             </div>
           )
         })}
