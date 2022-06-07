@@ -1,8 +1,9 @@
+import styles from 'src/components/Navbar/navbar.module.css'
+
 const Navbar = () => {
   return (
-    <div>
+    <div className={styles.navbar}>
       <h2>{'Navbar'}</h2>
-      <p>{'Find me in ./web/src/components/Navbar/Navbar.tsx'}</p>
     </div>
   )
 }
