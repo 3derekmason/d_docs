@@ -9,6 +9,9 @@
   gap: 8px;
   border-bottom: 0.25px solid #ffffff80;
 }
+.article .description {
+  text-transform: capitalize;
+}
 .article:hover {
   background: #ffffff10;
 }

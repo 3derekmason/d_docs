@@ -7,20 +7,23 @@ interface Props {
 
 const Article = ({ article }: Props) => {
   return (
-    <div className={styles.article}>
-      <div className={styles.articleRow}>
-        <h2>
-          <Link to={routes.article({ id: article.id })}>{article.title}</Link>
-        </h2>
-        <div>{article.description}</div>
+    <Link to={routes.article({ id: article.id })}>
+      <div className={styles.article}>
+        <div className={styles.articleRow}>
+          <h2>{article.title}</h2>
+          <div className={styles.description}>{article.description}</div>
+        </div>
+        <div className={styles.articleRow}>
+          <a href={`https://${article.url}`} target="_blank" rel="noreferrer">
+            {article.url}
+          </a>
+          <div>
+            Posted at:{' '}
+            {new Date(Date.parse(article.createdAt)).toLocaleString()}
+          </div>
+        </div>
       </div>
-      <div className={styles.articleRow}>
-        <a href={`https://${article.url}`} target="_blank" rel="noreferrer">
-          {article.url}
-        </a>
-        <div>Posted at: {article.createdAt}</div>
-      </div>
-    </div>
+    </Link>
   )
 }
 
