@@ -10,6 +10,9 @@ export const QUERY = gql`
       title
       description
       url
+      github
+      version
+      size
       createdAt
     }
   }

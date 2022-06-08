@@ -13,6 +13,9 @@ model Document {
   title String  @unique
   description String
   url   String
+  github String
+  version String
+  size String
   createdAt DateTime @default(now())
 }
 

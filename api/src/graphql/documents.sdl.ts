@@ -4,6 +4,9 @@ export const schema = gql`
     title: String!
     description: String!
     url: String!
+    github: String
+    version: String
+    size: String
     createdAt: DateTime!
   }
 
@@ -16,12 +19,18 @@ export const schema = gql`
     title: String!
     description: String!
     url: String!
+    github: String
+    version: String
+    size: String
   }
 
   input UpdateDocumentInput {
     title: String
     description: String
     url: String
+    github: String
+    version: String
+    size: String
   }
 
   type Mutation {
