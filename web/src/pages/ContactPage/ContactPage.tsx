@@ -17,6 +17,7 @@ import {
   CreateContactMutation,
   CreateContactMutationVariables,
 } from 'types/graphql'
+import { Link, routes } from '@redwoodjs/router'
 
 const CREATE_CONTACT = gql`
   mutation CreateContactMutation($input: CreateContactInput!) {
@@ -58,7 +59,9 @@ const ContactPage = () => {
         error={error}
         formMethods={formMethods}
         className={styles.form}
+        style={{ textAlign: 'center' }}
       >
+        <Link to={routes.home()}>Back home</Link>
         <h2>Send Derek a message:</h2>
         <FormError error={error} wrapperClassName="form-error" />
         <div className={styles.formRow}>

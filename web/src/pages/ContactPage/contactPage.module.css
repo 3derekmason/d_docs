@@ -1,9 +1,8 @@
 .form {
-  height: calc(100vh - 60px);
+  padding-top: 40px;
   display: grid;
   place-content: center;
-  gap: 40px;
-  background: linear-gradient(#000000, #041016);
+  gap: 24px;
   color: #D1C4E9;
 }
 label{
@@ -37,7 +36,7 @@ label{
   background: #212121;
 }
 
-button {
+.form button {
   margin-top: 16px;
   background: #00838F;
   height: 32px;
@@ -45,11 +44,11 @@ button {
   border-radius: 4px;
   color: #D1C4E9;
 }
-button:hover {
+.form button:hover {
   background: #0097A7;
   cursor: pointer;
 }
-button:active {
+.form button:active {
   background: #006064;
   color: #80DEEA;
 }
