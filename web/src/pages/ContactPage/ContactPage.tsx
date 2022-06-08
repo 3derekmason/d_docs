@@ -65,53 +65,73 @@ const ContactPage = () => {
           <Label name="name" errorClassName="error">
             Name
           </Label>
-          <TextField
-            name="name"
-            validation={{ required: true }}
-            errorClassName="error"
-          />
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <FieldError
+              style={{
+                fontSize: '12px',
+                color: '#d50000',
+                textAlign: 'center',
+              }}
+              name="name"
+              className="error"
+            />
+            <TextField
+              name="name"
+              validation={{ required: true }}
+              errorClassName="error"
+            />
+          </div>
         </div>
-        <FieldError
-          style={{ fontSize: '12px', color: '#d50000', textAlign: 'center' }}
-          name="name"
-          className="error"
-        />
+
         <div className={styles.formRow}>
           <Label name="email" errorClassName="error">
             Email
           </Label>
-          <TextField
-            name="email"
-            validation={{
-              required: true,
-              pattern: {
-                value: /^[^@]+@[^.]+\..+$/,
-                message: 'Please enter a valid email address',
-              },
-            }}
-            errorClassName="error"
-          />
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <FieldError
+              style={{
+                fontSize: '12px',
+                color: '#d50000',
+                textAlign: 'center',
+              }}
+              name="email"
+              className="error"
+            />
+            <TextField
+              name="email"
+              validation={{
+                required: true,
+                pattern: {
+                  value: /^[^@]+@[^.]+\..+$/,
+                  message: 'Please enter a valid email address',
+                },
+              }}
+              errorClassName="error"
+            />
+          </div>
         </div>
-        <FieldError
-          style={{ fontSize: '12px', color: '#d50000', textAlign: 'center' }}
-          name="email"
-          className="error"
-        />
+
         <div className={styles.formRow}>
           <Label name="message" errorClassName="error">
             Whats up?
           </Label>
-          <TextAreaField
-            name="message"
-            validation={{ required: true }}
-            errorClassName="error"
-          />
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <FieldError
+              style={{
+                fontSize: '12px',
+                color: '#d50000',
+                textAlign: 'center',
+              }}
+              name="message"
+              className="error"
+            />
+            <TextAreaField
+              name="message"
+              validation={{ required: true }}
+              errorClassName="error"
+            />
+          </div>
         </div>
-        <FieldError
-          style={{ fontSize: '12px', color: '#d50000', textAlign: 'center' }}
-          name="message"
-          className="error"
-        />
 
         <Submit disabled={loading}>Save</Submit>
       </Form>
