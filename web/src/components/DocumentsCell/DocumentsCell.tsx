@@ -27,15 +27,27 @@ export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
   return (
     <div
       style={{
-        paddingTop: '160px',
+        paddingTop: '120px',
         width: '800px',
-        height: 'calc(100% - 160px)',
+        height: 'calc(100% - 120px)',
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
         overflow: 'scroll',
       }}
     >
+      <h4
+        style={{
+          boxSizing: 'border-box',
+          paddingLeft: '32px',
+          paddingBottom: '4px',
+          borderBottom: '0.5px solid #ffffff80',
+          width: '90%',
+          margin: 0,
+        }}
+      >
+        Packages:
+      </h4>
       {documents.map((item) => {
         return <Article key={item.id} article={item} />
       })}
