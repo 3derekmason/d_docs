@@ -8,6 +8,6 @@
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  border-top: 0.5px solid #ffffff80;
+
   border-bottom: 0.5px solid #ffffff80;
 }

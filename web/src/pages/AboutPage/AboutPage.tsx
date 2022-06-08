@@ -5,7 +5,16 @@ const AboutPage = () => {
   return (
     <div className={styles.aboutPage}>
       <MetaTags title="About" description="About page" />
-      <h1 style={{ color: '#D1C4E9', borderBottom: '0.5px solid #ffffff80' }}>
+      <Link style={{ textAlign: 'center' }} to={routes.home()}>
+        Back to home
+      </Link>
+      <h1
+        style={{
+          color: '#D1C4E9',
+          borderBottom: '0.5px solid #ffffff80',
+          borderTop: '0.5px solid #ffffff80',
+        }}
+      >
         DDocumentation
       </h1>
       <p>
@@ -36,6 +45,13 @@ const AboutPage = () => {
           derekmason.dev
         </a>
       </p>
+      <h5>
+        Site made using{' '}
+        <a href="http://redwoodjs.com" target="_blank" rel="noreferrer">
+          RedwoodJS
+        </a>
+        .
+      </h5>
     </div>
   )
 }
