@@ -1,17 +1,7 @@
 import { useState } from 'react'
 import styles from 'src/components/Navbar/navbar.module.css'
-import { Link, routes, navigate } from '@redwoodjs/router'
+import { routes, navigate } from '@redwoodjs/router'
 import { useAuth } from '@redwoodjs/auth'
-
-// {isAuthenticated ? (
-//   <div>
-//     <a href="" onClick={logOut}>
-//       Logout
-//     </a>
-//   </div>
-// ) : (
-//   <Link to={routes.login()}>Login</Link>
-// )}
 
 const Navbar = () => {
   const { isAuthenticated, logOut } = useAuth()
@@ -58,6 +48,7 @@ const Navbar = () => {
         {bars.map((bar, i) => {
           return (
             <div
+              tabIndex="0"
               onClick={bar.route}
               key={i}
               className={open ? styles.openBar : styles.closedBar}
