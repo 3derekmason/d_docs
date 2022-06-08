@@ -27,11 +27,9 @@ export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
   return (
     <div
       style={{
-        paddingTop: '120px',
         width: '800px',
-        height: 'calc(100% - 120px)',
+        height: '100%',
         display: 'flex',
-        justifyContent: 'center',
         flexDirection: 'column',
         overflow: 'scroll',
       }}
@@ -41,6 +39,7 @@ export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
           boxSizing: 'border-box',
           paddingLeft: '32px',
           paddingBottom: '4px',
+          paddingTop: '4px',
           borderBottom: '0.5px solid #ffffff80',
           fontWeight: '200',
           width: '90%',
