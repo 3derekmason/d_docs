@@ -27,14 +27,13 @@ export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
   return (
     <div
       style={{
-        border: '1px solid red',
+        paddingTop: '40px',
         width: '800px',
-        height: '100%',
+        height: 'calc(100% - 40px)',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
         flexDirection: 'column',
-        gap: '16px',
+        overflow: 'scroll',
       }}
     >
       {documents.map((item) => {
