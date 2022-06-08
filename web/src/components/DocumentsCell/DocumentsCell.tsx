@@ -32,7 +32,6 @@ export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
-        gap: '16px',
       }}
     >
       {documents.map((item) => {

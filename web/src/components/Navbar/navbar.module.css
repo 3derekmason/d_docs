@@ -19,8 +19,10 @@
   background: none;
   color: #ffffff80;
   border: none;
+  animation: pulse 3s infinite linear
 }
 .navbar button:hover {
+  animation: none;
   color: #fff;
   cursor: pointer;
   border-left: 0.5px solid #ffffff;
@@ -75,3 +77,20 @@
   }
 }
 
+@keyframes pulse {
+  0% {
+    opacity: 1
+  }
+  40%{
+    opacity: 0.6
+  }
+  50% {
+    opacity: 0.4;
+  }
+  60%{
+    opacity: 0.6
+  }
+  100%{
+    opacity: 1;
+  }
+}

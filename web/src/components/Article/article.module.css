@@ -1,6 +1,6 @@
 .article{
   box-sizing: border-box;
-  padding: 4px;
+  padding: 16px;
   padding-left: 40px;
   width: 90%;
   display: flex;
@@ -9,7 +9,9 @@
   gap: 8px;
   border-bottom: 0.25px solid #ffffff80;
 }
-
+.article:hover {
+  background: #ffffff10;
+}
 .articleRow {
   display: flex;
   align-items: center;

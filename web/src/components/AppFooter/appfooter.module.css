@@ -7,7 +7,7 @@
   color: #9575CD;
   font-size: 14px;
   font-weight: 400;
-  animation: pulse 4s infinite linear
+  animation: pulse 6s infinite linear
 }
 .appFooter:hover {
   animation: none;
