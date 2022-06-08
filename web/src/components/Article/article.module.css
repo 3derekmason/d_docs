@@ -4,6 +4,7 @@
   padding-left: 40px;
   width: 90%;
   display: flex;
+  color: #fff;
   justify-content: center;
   flex-direction: column;
   gap: 8px;
@@ -11,6 +12,7 @@
 }
 .article .description {
   text-transform: capitalize;
+  color: #B39DDB;
 }
 .article:hover {
   background: #ffffff10;
