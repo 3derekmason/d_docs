@@ -11,6 +11,7 @@
   border-bottom: 0.25px solid #ffffff80;
 }
 .article .description {
+  font-size: 14px;
   text-transform: capitalize;
   color: #B39DDB;
 }

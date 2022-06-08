@@ -11,15 +11,15 @@ const Article = ({ article }: Props) => {
       <div className={styles.article}>
         <div className={styles.articleRow}>
           <h2>{article.title}</h2>
-          <div className={styles.description}>{article.description}</div>
+          {/* <div className={styles.description}>{article.description}</div> */}
         </div>
         <div className={styles.articleRow}>
           <a href={`https://${article.url}`} target="_blank" rel="noreferrer">
             {article.url}
           </a>
-          <div>
-            Posted at:{' '}
-            {new Date(Date.parse(article.createdAt)).toLocaleString()}
+          <div className={styles.description}>
+            Posted on:{' '}
+            {new Date(Date.parse(article.createdAt)).toLocaleDateString()}
           </div>
         </div>
       </div>
