@@ -13,6 +13,8 @@ import { MetaTags } from '@redwoodjs/web'
 import { toast, Toaster } from '@redwoodjs/web/toast'
 import { useEffect } from 'react'
 
+import AppBar from 'src/components/AppBar/AppBar'
+
 const LoginPage = () => {
   const { isAuthenticated, logIn } = useAuth()
 
@@ -43,14 +45,11 @@ const LoginPage = () => {
     <>
       <MetaTags title="Login" />
 
-      <main className="rw-main">
+      <main className="rw-main" style={{ background: '#000' }}>
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
+        <AppBar />
         <div className="rw-scaffold rw-login-container">
           <div className="rw-segment">
-            <header className="rw-segment-header">
-              <h2 className="rw-heading rw-heading-secondary">Login</h2>
-            </header>
-
             <div className="rw-segment-main">
               <div className="rw-form-wrapper">
                 <Form onSubmit={onSubmit} className="rw-form-wrapper">
