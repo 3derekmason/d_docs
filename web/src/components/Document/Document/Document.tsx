@@ -71,16 +71,19 @@ const Document = ({ document }) => {
         className="rw-segment"
         style={{ boxSizing: 'border-box', padding: '8px' }}
       >
-        <header className="rw-segment-header">
+        {/* <header className="rw-segment-header">
           <h2 className="rw-heading rw-heading-secondary">
             Document {document.id} Detail
           </h2>
-        </header>
+        </header> */}
         <h2>{document.title}</h2>
         <div>{document.description}</div>
         <a href={`http://${document.url}`} target="_blank" rel="noreferrer">
           {document.url}
         </a>
+        <p>{document.github}</p>
+        <p>{document.version}</p>
+        <p>{document.size}</p>
         <p>{timeTag(document.createdAt)}</p>
       </div>
       {isAuthenticated ? (
