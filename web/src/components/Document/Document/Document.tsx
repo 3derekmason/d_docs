@@ -5,6 +5,7 @@ import { useAuth } from '@redwoodjs/auth'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 import { Link, routes, navigate } from '@redwoodjs/router'
+import styles from 'src/components/Document/Document/document.module.css'
 
 const DELETE_DOCUMENT_MUTATION = gql`
   mutation DeleteDocumentMutation($id: Int!) {
@@ -68,23 +69,28 @@ const Document = ({ document }) => {
   return (
     <>
       <div
-        className="rw-segment"
+        className={styles.documentView}
         style={{ boxSizing: 'border-box', padding: '8px' }}
       >
-        {/* <header className="rw-segment-header">
-          <h2 className="rw-heading rw-heading-secondary">
-            Document {document.id} Detail
-          </h2>
-        </header> */}
         <h2>{document.title}</h2>
+        <div className={styles.docRow}>
+          <p>v{document.version}</p>
+          <p>{document.size}</p>
+        </div>
+
         <div>{document.description}</div>
-        <a href={`http://${document.url}`} target="_blank" rel="noreferrer">
-          {document.url}
-        </a>
-        <p>{document.github}</p>
-        <p>{document.version}</p>
-        <p>{document.size}</p>
-        <p>{timeTag(document.createdAt)}</p>
+        <div className={styles.docRow}>
+          <a href={`http://${document.url}`} target="_blank" rel="noreferrer">
+            Download
+          </a>
+          <a
+            href={`http://${document.github}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Code
+          </a>
+        </div>
       </div>
       {isAuthenticated ? (
         <nav className="rw-button-group">

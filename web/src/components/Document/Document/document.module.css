@@ -1,0 +1,20 @@
+.documentView {
+  box-sizing: border-box;
+  margin: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.documentView .docRow {
+  display: flex;
+  gap: 24px;
+}
+
+.docRow p {
+  font-weight: 200;
+  font-size: 14px;
+  color: #D1C4E9;
+}
