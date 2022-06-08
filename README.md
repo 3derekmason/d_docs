@@ -1,12 +1,26 @@
 
-# Welcome to DDocumentation
+# DDocumentation
 
+
+<br>
+
+## Overview
+
+DDocumentation or _d_docs_ is the source of information for open source packages published by Derek Mason.
 
 ---
 
 <br>
 
-## Overview
+## Getting Started
+
+Select a package from the home page to view details. Available information includes
+- Package version
+- Unpackaged size
+- Download link
+- Source code link
+
+To leave a comment or a message, choose the Contact option from the navigation menu.
 
 ---
 
@@ -28,56 +42,9 @@ Your browser should automatically open to http://localhost:8910 where you'll see
 
 <br>
 
-## Prisma and the database
+## Contributors
 
-```
-yarn rw prisma studio
-```
-
-```
-yarn rw prisma migrate dev
-```
-
-```
-yarn redwood g scaffold <model>
-```
-
----
-
-<br>
-
-## Frontend first with Storybook
-
-```
-yarn rw storybook
-```
-
-```
-yarn rw setup ui --help
-```
----
-
-<br>
-
-## Testing with Jest
-
-```
-yarn rw test
-```
----
-
-<br>
-
-## Ship it
-
-```
-yarn rw setup deploy --help
-```
-
-```
-yarn rw setup auth --help
-```
----
+Derek Mason is a developer in Denver, Colorado who uses software engineering as a tool to bring impactful ideas to life. Find out more at [derekmason.dev](https://derekmason.dev)
 
 #### Made with love using [RedwoodJS](https://redwoodjs.com)
 
