@@ -72,7 +72,9 @@ const Document = ({ document }) => {
         className={styles.documentView}
         style={{ boxSizing: 'border-box', padding: '8px' }}
       >
-        <h2>{document.title}</h2>
+        <h2 style={{ borderBottom: '1px solid #ffffff80' }}>
+          {document.title}
+        </h2>
         <div className={styles.docRow}>
           <p>v{document.version}</p>
           <p>{document.size}</p>
