@@ -2,6 +2,7 @@
   height: 100%;
   width: 320px;
   display: flex;
+  background: linear-gradient( #000, 33%,#311B9210);
   flex-direction: column;
   align-items: center;
   gap: 16px;

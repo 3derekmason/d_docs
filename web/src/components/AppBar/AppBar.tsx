@@ -12,9 +12,6 @@ const AppBar = () => {
 
       <nav>
         <ul className={styles.navBar}>
-          <li>
-            <Link to={routes.home()}>Home</Link>
-          </li>
           {isAuthenticated ? (
             <li>
               <button onClick={logOut}>Logout</button>

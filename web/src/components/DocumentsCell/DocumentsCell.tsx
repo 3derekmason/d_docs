@@ -36,18 +36,19 @@ export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
         overflow: 'scroll',
       }}
     >
-      <h4
+      <h5
         style={{
           boxSizing: 'border-box',
           paddingLeft: '32px',
           paddingBottom: '4px',
           borderBottom: '0.5px solid #ffffff80',
+          fontWeight: '200',
           width: '90%',
           margin: 0,
         }}
       >
-        Packages:
-      </h4>
+        All Packages:
+      </h5>
       {documents.map((item) => {
         return <Article key={item.id} article={item} />
       })}

@@ -8,6 +8,12 @@ const Navbar = () => {
   const bars = [
     {
       route: () => {
+        navigate(routes.home())
+      },
+      name: 'Packages',
+    },
+    {
+      route: () => {
         navigate(routes.contact())
       },
       name: 'Contact',
