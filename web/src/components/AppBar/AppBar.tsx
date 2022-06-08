@@ -7,28 +7,20 @@ const AppBar = () => {
   return (
     <header className={styles.appBar}>
       <h1>
-        <Link to={routes.documents()}>d_docs</Link>
+        <Link to={routes.home()}>d_docs</Link>
       </h1>
 
       <nav>
         <ul className={styles.navBar}>
           <li>
-            <Link to={routes.contact()}>Contact</Link>
-          </li>
-          <li>
-            <Link to={routes.about()}>About</Link>
-          </li>
-          <li>
             <Link to={routes.home()}>Home</Link>
           </li>
           {isAuthenticated ? (
-            <div>
-              <a href="" onClick={logOut}>
-                Logout
-              </a>
-            </div>
+            <li>
+              <button onClick={logOut}>Logout</button>
+            </li>
           ) : (
-            <Link to={routes.login()}>Login</Link>
+            ''
           )}
         </ul>
       </nav>
