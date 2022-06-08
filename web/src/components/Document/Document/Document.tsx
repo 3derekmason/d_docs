@@ -67,7 +67,10 @@ const Document = ({ document }) => {
 
   return (
     <>
-      <div className="rw-segment">
+      <div
+        className="rw-segment"
+        style={{ boxSizing: 'border-box', padding: '8px' }}
+      >
         <header className="rw-segment-header">
           <h2 className="rw-heading rw-heading-secondary">
             Document {document.id} Detail
