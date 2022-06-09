@@ -61,7 +61,7 @@ const ContactPage = () => {
         className={styles.form}
         style={{ textAlign: 'center' }}
       >
-        <Link to={routes.home()}>Back home</Link>
+        <Link to={routes.home()}>Back to home</Link>
         <h2>Send Derek a message:</h2>
         <FormError error={error} wrapperClassName="form-error" />
         <div className={styles.formRow}>

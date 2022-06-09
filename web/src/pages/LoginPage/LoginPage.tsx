@@ -49,8 +49,10 @@ const LoginPage = () => {
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
         <AppBar />
         <div className="rw-scaffold rw-login-container">
+          <Link to={routes.home()}>Back</Link>
           <div className="rw-segment">
             <div className="rw-segment-main">
+              <h2 style={{ color: '#4527A0' }}>Admin Login</h2>
               <div className="rw-form-wrapper">
                 <Form onSubmit={onSubmit} className="rw-form-wrapper">
                   <Label
@@ -95,19 +97,24 @@ const LoginPage = () => {
                     }}
                   />
 
-                  <div className="rw-forgot-link">
+                  {/* <div className="rw-forgot-link">
                     <Link
                       to={routes.forgotPassword()}
                       className="rw-forgot-link"
                     >
                       Forgot Password?
                     </Link>
-                  </div>
+                  </div> */}
 
                   <FieldError name="password" className="rw-field-error" />
 
                   <div className="rw-button-group">
-                    <Submit className="rw-button rw-button-blue">Login</Submit>
+                    <Submit
+                      className="rw-button"
+                      style={{ background: '#512DA8' }}
+                    >
+                      Login
+                    </Submit>
                   </div>
                 </Form>
               </div>
