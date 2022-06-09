@@ -16,8 +16,18 @@
 .docRow p {
   font-weight: 200;
   font-size: 14px;
-  color: #D1C4E9;
+  color: #80DEEA;
   animation: fadeIn 1s;
+}
+
+.docRow a {
+  color: #00838F;
+}
+.docRow a:hover {
+  color: #D1C4E9;
+}
+.docRow a:active {
+  color: #fff;
 }
 @keyframes fadeIn {
   0%{
