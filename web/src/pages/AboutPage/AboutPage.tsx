@@ -8,7 +8,7 @@ const AboutPage = () => {
       <Link style={{ textAlign: 'center' }} to={routes.home()}>
         Back to home
       </Link>
-      <div>
+      <div style={{ width: '50%' }}>
         <h1
           style={{
             color: '#D1C4E9',
@@ -23,7 +23,7 @@ const AboutPage = () => {
           source of information for open source packages published by Derek
           Mason.
         </p>
-        <h3 style={{ color: '#7C4DFF' }}>Getting Started</h3>
+        <h3 style={{ color: '#B39DDB' }}>Getting Started</h3>
         <p>
           Select a package from the home page to view details. Available
           information includes
@@ -37,10 +37,11 @@ const AboutPage = () => {
         <p>
           To leave a comment or a message, choose the{' '}
           <strong style={{ color: '#D1C4E9' }}>Contact</strong> option from the
-          navigation menu.
+          navigation menu. Or create an issue or pull request on any of the
+          package repos on github!
         </p>
-        <h4 style={{ color: '#7C4DFF' }}>Contributors</h4>
-        <p>
+        <h4 style={{ color: '#B39DDB' }}>Contributors</h4>
+        <p style={{ fontWeight: '200' }}>
           Derek Mason is a developer in Denver, Colorado who uses software
           engineering as a tool to bring impactful ideas to life. Find out more
           at{' '}
@@ -52,9 +53,11 @@ const AboutPage = () => {
           style={{
             borderBottom: '0.5px solid #ffffff80',
             paddingBottom: '8px',
+            letterSpacing: '0.5px',
+            fontWeight: 400,
           }}
         >
-          Site made using{' '}
+          * Site made using the fantastic framework,{' '}
           <a href="http://redwoodjs.com" target="_blank" rel="noreferrer">
             RedwoodJS
           </a>
