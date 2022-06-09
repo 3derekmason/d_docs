@@ -9,7 +9,7 @@ const Message = ({ message }: Props) => {
     <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
       <p>{message.name}</p>
       <p style={{ fontWeight: 200, fontSize: '18px' }}>{message.message}</p>
-      <p>{message.email}</p>
+      <p style={{ color: '#00838F' }}>{message.email}</p>
       <p style={{ fontSize: '14px', fontWeight: 200 }}>
         Posted: {new Date(message.createdAt).toLocaleString()}
       </p>

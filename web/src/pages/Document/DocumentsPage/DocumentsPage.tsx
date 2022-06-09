@@ -5,7 +5,7 @@ const DocumentsPage = () => {
   return (
     <div className={styles.documentsPage}>
       <DocumentsCell />
-      <h3 style={{ margin: 0 }}>Comments/Messages</h3>
+      <h3 style={{ margin: 0, color: '#00838F' }}>Comments/Messages</h3>
       <ContactsCell />
     </div>
   )
