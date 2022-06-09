@@ -24,7 +24,7 @@ a:active {
 
 .appBar h1 a {
   font-family: 'Courier New', Courier, monospace;
-  color: #4527A0;
+  color: #9575CD;
   text-shadow:  0.5px 0px #7C4DFF;
   transition: 0.4s;
 }
