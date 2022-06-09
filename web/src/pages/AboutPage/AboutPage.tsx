@@ -36,7 +36,7 @@ const AboutPage = () => {
         </p>
         <p>
           To leave a comment or a message, choose the{' '}
-          <strong style={{ color: '#D1C4E9' }}>Contact</strong> option from the
+          <strong style={{ color: '#4DD0E1' }}>Contact</strong> option from the
           navigation menu. Or create an issue or pull request on any of the
           package repos on github!
         </p>
@@ -58,7 +58,12 @@ const AboutPage = () => {
           }}
         >
           * Site made using the fantastic framework,{' '}
-          <a href="http://redwoodjs.com" target="_blank" rel="noreferrer">
+          <a
+            href="http://redwoodjs.com"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: '#4DD0E1' }}
+          >
             RedwoodJS
           </a>
           .
