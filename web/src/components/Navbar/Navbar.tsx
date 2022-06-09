@@ -48,7 +48,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className={styles.navbar}>
+    <div className={open ? styles.navbar : styles.closedNavBar}>
       <button onClick={toggleOpen}>{open ? 'Close' : 'Menu'}</button>
       <div className={styles.navbarContainer}>
         {bars.map((bar, i) => {

@@ -7,14 +7,26 @@
   align-items: center;
   gap: 16px;
   border-right: 0.5px solid #ffffff80;
+  transition: 0.2s;
 }
 
 .navbar .navbarContainer {
   height: 60%;
   width: 100%;
 }
+.closedNavBar {
+  height: 100%;
+  width: 56px;
+  display: flex;
+  background: linear-gradient( #000, 33%,#311B9210);
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 
-.navbar button {
+  transition: 0.5s;
+}
+
+.navbar button, .closedNavBar button {
   width: 48px;
   margin-top: 8px;
   background: none;
@@ -22,7 +34,7 @@
   border: none;
   animation: pulse 3s infinite linear
 }
-.navbar button:hover {
+.navbar button:hover, .closedNavBar button:hover {
   animation: none;
   color: #fff;
   cursor: pointer;
