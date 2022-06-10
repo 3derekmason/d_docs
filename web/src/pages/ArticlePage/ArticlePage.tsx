@@ -9,16 +9,19 @@ interface Props {
 
 const ArticlePage = ({ id }: Props) => {
   return (
-    <div
-      style={{
-        height: '100%',
-        display: 'flex',
-      }}
-    >
+    <>
       <MetaTags title="Article" description="Article page" />
-      <Navbar />
-      <DocumentCell id={id} />
-    </div>
+      <div
+        style={{
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+        }}
+      >
+        <Navbar />
+        <DocumentCell id={id} />
+      </div>
+    </>
   )
 }
 

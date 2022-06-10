@@ -12,6 +12,13 @@ const Navbar = () => {
       },
       name: 'Packages',
     },
+
+    {
+      route: () => {
+        navigate(routes.about())
+      },
+      name: 'About',
+    },
     {
       route: () => {
         navigate(routes.contact())
@@ -19,10 +26,12 @@ const Navbar = () => {
       name: 'Contact',
     },
     {
-      route: () => {
-        navigate(routes.about())
-      },
-      name: 'About',
+      route: isAuthenticated
+        ? logOut
+        : () => {
+            navigate(routes.login())
+          },
+      name: isAuthenticated ? 'Logout' : 'Login',
     },
     isAuthenticated
       ? {
@@ -32,14 +41,6 @@ const Navbar = () => {
           name: 'Admin',
         }
       : '',
-    {
-      route: isAuthenticated
-        ? logOut
-        : () => {
-            navigate(routes.login())
-          },
-      name: isAuthenticated ? 'Logout' : 'Login',
-    },
   ]
   const [open, setOpen] = useState(true)
 
@@ -52,7 +53,7 @@ const Navbar = () => {
       <button onClick={toggleOpen}>{open ? 'Close' : 'Menu'}</button>
       <div className={styles.navbarContainer}>
         {bars.map((bar, i) => {
-          return (
+          return bar.name ? (
             <div
               tabIndex="0"
               onClick={bar.route}
@@ -61,6 +62,8 @@ const Navbar = () => {
             >
               {bar.name}
             </div>
+          ) : (
+            ''
           )
         })}
       </div>

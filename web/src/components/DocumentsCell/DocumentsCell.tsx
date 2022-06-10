@@ -27,11 +27,11 @@ export const Success = ({ documents }: CellSuccessProps<DocumentsQuery>) => {
   return (
     <div
       style={{
-        width: '800px',
+        width: '100%',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'scroll',
+        overflow: 'auto',
       }}
     >
       <h5

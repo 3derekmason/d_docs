@@ -1,6 +1,6 @@
 .navbar {
   height: 100%;
-  width: 320px;
+  width: 240px;
   display: flex;
   background: linear-gradient( #000, 33%,#311B9210);
   flex-direction: column;
