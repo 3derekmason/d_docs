@@ -1,6 +1,7 @@
 import { Private, Router, Route, Set } from '@redwoodjs/router'
 import DocumentsLayout from 'src/layouts/DocumentsLayout'
 import BlogLayout from 'src/layouts/BlogLayout'
+import NavLayout from 'src/layouts/NavLayout'
 
 const Routes = () => {
   return (
@@ -18,10 +19,12 @@ const Routes = () => {
         </Set>
       </Private>
       <Set wrap={BlogLayout}>
-        <Route path="/contact" page={ContactPage} name="contact" />
-        <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
-        <Route path="/about" page={AboutPage} name="about" />
-        <Route path="/" page={HomePage} name="home" />
+        <Set wrap={NavLayout}>
+          <Route path="/contact" page={ContactPage} name="contact" />
+          <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
+          <Route path="/about" page={AboutPage} name="about" />
+          <Route path="/" page={HomePage} name="home" />
+        </Set>
       </Set>
       <Route notfound page={NotFoundPage} />
     </Router>

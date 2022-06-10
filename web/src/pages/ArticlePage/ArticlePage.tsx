@@ -1,7 +1,7 @@
 // import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import DocumentCell from 'src/components/Document/DocumentCell'
-import Navbar from 'src/components/Navbar/Navbar'
+// import Navbar from 'src/components/Navbar/Navbar'
 
 interface Props {
   id: number
@@ -18,7 +18,7 @@ const ArticlePage = ({ id }: Props) => {
           display: 'flex',
         }}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         <DocumentCell id={id} />
       </div>
     </>
