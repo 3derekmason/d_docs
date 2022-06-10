@@ -94,25 +94,6 @@ const Document = ({ document }) => {
           </a>
         </div>
       </div>
-      {isAuthenticated ? (
-        <nav className="rw-button-group">
-          <Link
-            to={routes.editDocument({ id: document.id })}
-            className="rw-button rw-button-blue"
-          >
-            Edit
-          </Link>
-          <button
-            type="button"
-            className="rw-button rw-button-red"
-            onClick={() => onDeleteClick(document.id)}
-          >
-            Delete
-          </button>
-        </nav>
-      ) : (
-        ''
-      )}
     </>
   )
 }
