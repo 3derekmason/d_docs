@@ -13,8 +13,8 @@ const Article = ({ article }: Props) => {
           <h2>{article.title}</h2>
         </div>
         <div className={styles.articleRow}>
-          <a href={`https://${article.url}`} target="_blank" rel="noreferrer">
-            {article.url}
+          <a href={`http://${article.url}`} target="_blank" rel="noreferrer">
+            View
           </a>
           <div className={styles.description}>
             Posted:{' '}

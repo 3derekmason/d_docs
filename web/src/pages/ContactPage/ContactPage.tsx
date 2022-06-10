@@ -17,7 +17,7 @@ import {
   CreateContactMutation,
   CreateContactMutationVariables,
 } from 'types/graphql'
-import { Link, routes } from '@redwoodjs/router'
+// import { Link, routes } from '@redwoodjs/router'
 
 const CREATE_CONTACT = gql`
   mutation CreateContactMutation($input: CreateContactInput!) {
@@ -53,91 +53,100 @@ const ContactPage = () => {
     <>
       <MetaTags title="Contact" description="Contact page" />
       <Toaster />
-      <Form
-        onSubmit={onSubmit}
-        config={{ mode: 'onBlur' }}
-        error={error}
-        formMethods={formMethods}
-        className={styles.form}
-        style={{ textAlign: 'center' }}
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
       >
-        <Link to={routes.home()}>Back to home</Link>
-        <h2>Send Derek a message:</h2>
-        <FormError error={error} wrapperClassName="form-error" />
-        <div className={styles.formRow}>
-          <Label name="name" errorClassName="error">
-            Name
-          </Label>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <FieldError
-              style={{
-                fontSize: '12px',
-                color: '#d50000',
-                textAlign: 'center',
-              }}
-              name="name"
-              className="error"
-            />
-            <TextField
-              name="name"
-              validation={{ required: true }}
-              errorClassName="error"
-            />
+        <Form
+          onSubmit={onSubmit}
+          config={{ mode: 'onBlur' }}
+          error={error}
+          formMethods={formMethods}
+          className={styles.form}
+          style={{ textAlign: 'center' }}
+        >
+          <h2>Send Derek a message:</h2>
+          <FormError error={error} wrapperClassName="form-error" />
+          <div className={styles.formRow}>
+            <Label name="name" errorClassName="error">
+              Name
+            </Label>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <FieldError
+                style={{
+                  fontSize: '12px',
+                  color: '#d50000',
+                  textAlign: 'center',
+                }}
+                name="name"
+                className="error"
+              />
+              <TextField
+                name="name"
+                validation={{ required: true }}
+                errorClassName="error"
+              />
+            </div>
           </div>
-        </div>
 
-        <div className={styles.formRow}>
-          <Label name="email" errorClassName="error">
-            Email
-          </Label>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <FieldError
-              style={{
-                fontSize: '12px',
-                color: '#d50000',
-                textAlign: 'center',
-              }}
-              name="email"
-              className="error"
-            />
-            <TextField
-              name="email"
-              validation={{
-                required: true,
-                pattern: {
-                  value: /^[^@]+@[^.]+\..+$/,
-                  message: 'Please enter a valid email address',
-                },
-              }}
-              errorClassName="error"
-            />
+          <div className={styles.formRow}>
+            <Label name="email" errorClassName="error">
+              Email
+            </Label>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <FieldError
+                style={{
+                  fontSize: '12px',
+                  color: '#d50000',
+                  textAlign: 'center',
+                }}
+                name="email"
+                className="error"
+              />
+              <TextField
+                name="email"
+                validation={{
+                  required: true,
+                  pattern: {
+                    value: /^[^@]+@[^.]+\..+$/,
+                    message: 'Please enter a valid email address',
+                  },
+                }}
+                errorClassName="error"
+              />
+            </div>
           </div>
-        </div>
 
-        <div className={styles.formRow}>
-          <Label name="message" errorClassName="error">
-            Whats up?
-          </Label>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <FieldError
-              style={{
-                fontSize: '12px',
-                color: '#d50000',
-                textAlign: 'center',
-              }}
-              name="message"
-              className="error"
-            />
-            <TextAreaField
-              name="message"
-              validation={{ required: true }}
-              errorClassName="error"
-            />
+          <div className={styles.formRow}>
+            <Label name="message" errorClassName="error">
+              Whats up?
+            </Label>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <FieldError
+                style={{
+                  fontSize: '12px',
+                  color: '#d50000',
+                  textAlign: 'center',
+                }}
+                name="message"
+                className="error"
+              />
+              <TextAreaField
+                name="message"
+                validation={{ required: true }}
+                errorClassName="error"
+              />
+            </div>
           </div>
-        </div>
 
-        <Submit disabled={loading}>Save</Submit>
-      </Form>
+          <Submit disabled={loading}>Save</Submit>
+        </Form>
+      </div>
     </>
   )
 }

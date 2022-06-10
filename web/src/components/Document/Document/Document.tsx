@@ -83,14 +83,14 @@ const Document = ({ document }) => {
         <div>{document.description}</div>
         <div className={styles.docRow}>
           <a href={`http://${document.url}`} target="_blank" rel="noreferrer">
-            Download
+            NPM Download
           </a>
           <a
             href={`http://${document.github}`}
             target="_blank"
             rel="noreferrer"
           >
-            View Code
+            View Source Code
           </a>
         </div>
       </div>

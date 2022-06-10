@@ -1,14 +1,11 @@
-import { Link, routes } from '@redwoodjs/router'
+// import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import styles from 'src/pages/AboutPage/aboutPage.module.css'
 const AboutPage = () => {
   return (
     <div className={styles.aboutPage}>
       <MetaTags title="About" description="About page" />
-      <Link style={{ textAlign: 'center' }} to={routes.home()}>
-        Back to home
-      </Link>
-      <div style={{ width: '50%' }}>
+      <div style={{ width: '56%' }}>
         <h1
           style={{
             color: '#D1C4E9',
